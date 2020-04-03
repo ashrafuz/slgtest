@@ -27,6 +27,7 @@ public class Node
     public NodeType nodeType;
     public Transform nodeTransform;
     public WallConfig wallConfig;
+    public List<Node> neighbours = new List<Node> ();
 
     public Node (int x, int y, GameObject g)
     {
@@ -40,6 +41,7 @@ public class Node
         this.wallConfig.bot = true;
         this.wallConfig.right = true;
     }
+
 }
 
 
@@ -100,6 +102,11 @@ public class MazeGen : MonoBehaviour
                 nodeList[i, j].nodeTransform.GetComponent<NodeVisual> ().UpdateVisual (nodeList[i, j]);
             }
         }
+    }
+
+    public Node[,] GetNodes()
+    {
+        return nodeList;
     }
 
 

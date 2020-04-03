@@ -9,6 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="MazeGen.cs" t="Include" />
           <e p="NodeVisual.cs" t="Include" />
+          <e p="Pathfinding.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
