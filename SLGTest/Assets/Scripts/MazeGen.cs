@@ -121,13 +121,13 @@ public class MazeGen : MonoBehaviour
         }
 
         //left
-        if (traverseNode.x > 1 && nodeList[traverseNode.x - 1, traverseNode.y].nodeType == NodeType.NOT_VISITED)
+        if (traverseNode.x > 0 && nodeList[traverseNode.x - 1, traverseNode.y].nodeType == NodeType.NOT_VISITED)
         {
             nList.Add (nodeList[traverseNode.x - 1, traverseNode.y]);
         }
 
         //bot
-        if (traverseNode.y > 1 && nodeList[traverseNode.x, traverseNode.y - 1].nodeType == NodeType.NOT_VISITED)
+        if (traverseNode.y > 0 && nodeList[traverseNode.x, traverseNode.y - 1].nodeType == NodeType.NOT_VISITED)
         {
             nList.Add (nodeList[traverseNode.x, traverseNode.y - 1]);
         }
